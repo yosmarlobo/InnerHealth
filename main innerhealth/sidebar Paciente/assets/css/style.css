@@ -1,0 +1,42 @@
+.contenido1 {
+  margin-top: 30px;
+  background-color: #ff5999;
+
+  width: 40%;
+  border-radius: 15px;
+  border-bottom: none;
+}
+.contenido2 {
+  margin-top: 30px;
+  width: 40%;
+  color: black;
+  border-radius: 15px;
+  border-top: none;
+  background-color: #ff8cb8;
+  padding: 10px;
+}
+
+.contenido-extra {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  width: 40%;
+  border-radius: 15px;
+  background-color: #ff8cb8;
+  padding: 10px;
+}
+.contenido-extra svg {
+  margin-left: 20px;
+  color: rgb(1, 1, 158);
+}
+.contenido-extra h5 {
+  color: black;
+}
+.centrado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.centrado img {
+  border-radius: 50px;
+}

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InnerHealth | HealthDoc</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap"
+      rel="s tylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+
+    <link rel="stylesheet" href="assets/vendors/iconly/bold.css" />
+
+    <link
+      rel="stylesheet"
+      href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/vendors/bootstrap-icons/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="assets/css/app.css" />
+
+    <link rel="icon" href="assets/img/logo.png" />
+    <style>
+      * {
+        font-family: "Nunito";
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app">
+      <!-- SIDEBAR -->
+      <div id="sidebar" class="active">
+        <div class="sidebar-wrapper active">
+          <div class="sidebar-header">
+            <div class="d-flex justify-content-between">
+              <div class="logo">
+                <a href="index.html"> InnerHealth</a>
+              </div>
+              <div class="toggler">
+                <a href="#" class="sidebar-hide d-xl-none d-block"
+                  ><i class="bi bi-x bi-middle"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar-menu">
+            <ul class="menu">
+              <li class="sidebar-title">Menu</li>
+
+              <li class="sidebar-item active">
+                <a href="index.html" class="sidebar-link">
+                  <i class="bi bi-grid-fill"></i>
+                  <span>Tablero</span>
+                </a>
+              </li>
+              <li class="sidebar-item active">
+                <a href="pacientes_madres.html" class="sidebar-link">
+                  <i class="bi bi-grid-fill"></i>
+                  <span>Pacientes</span>
+                </a>
+              </li>
+              <li class="sidebar-item active">
+                <a href="calendario.html" class="sidebar-link">
+                  <i class="bi bi-grid-fill"></i>
+                  <span>Calendario</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <button class="sidebar-toggler btn x">
+            <i data-feather="x"></i>
+          </button>
+        </div>
+      </div>
+      <!-- CLOSE SIDEBAR -->
+      <div id="main">
+        <header class="mb-3">
+          <a href="#" class="burger-btn d-block d-xl-none">
+            <i class="bi bi-justify fs-3"></i>
+          </a>
+        </header>
+
+        <div class="page-heading">
+          <h3>Bienvenida Dra.Maria Verucci</h3>
+        </div>
+        <div class="page-content">
+          <section class="row">
+            <div class="col-12 col-lg-9">
+              <div class="row">
+                <div class="col-6 col-lg-3 col-md-6">
+                  <div class="card">
+                    <div class="card-body px-3 py-4-5">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <div class="stats-icon purple">
+                            <i class="iconly-boldShow"></i>
+                          </div>
+                        </div>
+                        <div class="col-md-8">
+                          <h6 class="text-muted font-semibold">
+                            Total de pacientes
+                          </h6>
+                          <h6 class="font-extrabold mb-0">15000</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-lg-3 col-md-6">
+                  <div class="card">
+                    <div class="card-body px-3 py-4-5">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <div class="stats-icon blue">
+                            <i class="iconly-boldProfile"></i>
+                          </div>
+                        </div>
+                        <div class="col-md-8">
+                          <h6 class="text-muted font-semibold">
+                            Pacientes en espera
+                          </h6>
+                          <h6 class="font-extrabold mb-0">10</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-6 col-lg-3 col-md-6">
+                  <div class="card">
+                    <div class="card-body px-3 py-4-5">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <div class="stats-icon red">
+                            <i class="iconly-boldBookmark"></i>
+                          </div>
+                        </div>
+                        <div class="col-md-8">
+                          <h6 class="text-muted font-semibold">
+                            Consultas Realizadas
+                          </h6>
+                          <h6 class="font-extrabold mb-0">112</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="card">
+                    <div class="card-header">
+                      <h4>Pacientes en la Temporada</h4>
+                    </div>
+                    <div class="card-body">
+                      <div id="chart-profile-visit"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-xl-4">
+                  <div class="card">
+                    <div class="card-header">
+                      <h4>Casos mas comunes en tus pacientes</h4>
+                    </div>
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-6">
+                          <div class="d-flex align-items-center">
+                            <svg
+                              class="bi text-primary"
+                              width="32"
+                              height="32"
+                              fill="blue"
+                              style="width: 10px"
+                            >
+                              <use
+                                xlink:href="assets/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill"
+                              />
+                            </svg>
+                            <h5 class="mb-0 ms-3">Fibro adenomas</h5>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <h5 class="mb-0">57</h5>
+                        </div>
+                        <div class="col-12">
+                          <div id="chart-europe"></div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6">
+                          <div class="d-flex align-items-center">
+                            <svg
+                              class="bi text-success"
+                              width="32"
+                              height="32"
+                              fill="blue"
+                              style="width: 10px"
+                            >
+                              <use
+                                xlink:href="assets/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill"
+                              />
+                            </svg>
+                            <h5 class="mb-0 ms-3">Cancer de Mama</h5>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <h5 class="mb-0">320</h5>
+                        </div>
+                        <div class="col-12">
+                          <div id="chart-america"></div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6">
+                          <div class="d-flex align-items-center">
+                            <svg
+                              class="bi text-danger"
+                              width="32"
+                              height="32"
+                              fill="blue"
+                              style="width: 10px"
+                            >
+                              <use
+                                xlink:href="assets/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill"
+                              />
+                            </svg>
+                            <h5 class="mb-0 ms-3">Embarazo Precoz</h5>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <h5 class="mb-0">120</h5>
+                        </div>
+                        <div class="col-12">
+                          <div id="chart-indonesia"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-xl-8">
+                  <div class="card">
+                    <div class="card-header">
+                      <h4>Solicitudes Nuevas</h4>
+                    </div>
+                    <div class="card-body">
+                      <div class="table-responsive">
+                        <table class="table table-hover table-lg">
+                          <thead>
+                            <tr>
+                              <th>Paciente</th>
+                              <th>Caso</th>
+                              <th>Respuesta</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="col-3">
+                                <div class="d-flex align-items-center">
+                                  <div class="avatar avatar-md">
+                                    <img src="assets/images/faces/5.jpg" />
+                                  </div>
+                                  <p class="font-bold ms-3 mb-0">
+                                    Daniela Moretti
+                                  </p>
+                                </div>
+                              </td>
+                              <td>
+                                <p class="mb-0">
+                                  Doctora Maria Verucci llevo 7 meses de
+                                  embarazo pero presento mucho dolores me
+                                  gustaria una cita con usted.
+                                </p>
+                              </td>
+                              <td class="col-auto">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="16"
+                                  height="16"
+                                  fill="currentColor"
+                                  class="bi bi-check-lg"
+                                  viewBox="0 0 16 16"
+                                  id="check"
+                                >
+                                  <path
+                                    d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"
+                                  />
+                                </svg>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="16"
+                                  height="16"
+                                  fill="currentColor"
+                                  class="bi bi-x-lg"
+                                  viewBox="0 0 16 16 "
+                                  id="false"
+                                >
+                                  <path
+                                    fill-rule="evenodd"
+                                    d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"
+                                  />
+                                  <path
+                                    fill-rule="evenodd"
+                                    d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"
+                                  />
+                                </svg>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td class="col-3">
+                                <div class="d-flex align-items-center">
+                                  <div class="avatar avatar-md">
+                                    <img src="assets/images/faces/7.jpg" />
+                                  </div>
+                                  <p class="font-bold ms-3 mb-0">Juana Maria</p>
+                                </div>
+                              </td>
+                              <td>
+                                <p class="mb-0">
+                                  Doctora Maria Verucci,Presento problemas al
+                                  orinar...Me gustaria una cita con usted.
+                                </p>
+                              </td>
+                              <td class="col-auto">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="16"
+                                  height="16"
+                                  fill="currentColor"
+                                  class="bi bi-check-lg"
+                                  viewBox="0 0 16 16"
+                                  id="check"
+                                >
+                                  <path
+                                    d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"
+                                  />
+                                </svg>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="16"
+                                  height="16"
+                                  fill="currentColor"
+                                  class="bi bi-x-lg"
+                                  viewBox="0 0 16 16"
+                                  id="false"
+                                >
+                                  <path
+                                    fill-rule="evenodd"
+                                    d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"
+                                  />
+                                  <path
+                                    fill-rule="evenodd"
+                                    d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"
+                                  />
+                                </svg>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-3">
+              <div class="card">
+                <div class="card-body py-4 px-5">
+                  <div class="d-flex align-items-center">
+                    <div class="avatar avatar-xl">
+                      <img src="assets/images/faces/3.jpg" alt="Face 1" />
+                    </div>
+                    <div class="ms-3 name">
+                      <h5 class="font-bold">Dra Maria Verucci</h5>
+                      <h6 class="text-muted mb-0">Ginecòloga</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <h4>Citas Pendientes</h4>
+                </div>
+                <div class="card-content pb-4">
+                  <div class="recent-message d-flex px-4 py-3">
+                    <div class="avatar avatar-lg">
+                      <img src="assets/images/faces/5.jpg" />
+                    </div>
+                    <div class="name ms-4">
+                      <h5 class="mb-1">Naida Quispe</h5>
+                      <h6 class="text-muted mb-0">Consultas de medicamento</h6>
+                      <button
+                        type="button"
+                        class="btn btn-outline-danger"
+                        style="font-size: 10px"
+                      >
+                        Contactarse
+                      </button>
+                    </div>
+                  </div>
+                  <div class="recent-message d-flex px-4 py-3">
+                    <div class="avatar avatar-lg">
+                      <img src="assets/images/faces/6.jpg" />
+                    </div>
+                    <div class="name ms-4">
+                      <h5 class="mb-1">Arely Alcantara</h5>
+                      <h6 class="text-muted mb-0">Chequeo Preventivo</h6>
+                      <button
+                        type="button"
+                        class="btn btn-outline-danger"
+                        style="font-size: 10px"
+                      >
+                        Contactarse
+                      </button>
+                    </div>
+                  </div>
+                  <div class="recent-message d-flex px-4 py-3">
+                    <div class="avatar avatar-lg">
+                      <img src="assets/images/faces/1.jpg" />
+                    </div>
+                    <div class="name ms-4">
+                      <h5 class="mb-1">Nayeli Galan</h5>
+                      <h6 class="text-muted mb-0">Infeccion De Urina</h6>
+                      <button
+                        type="button"
+                        class="btn btn-outline-danger"
+                        style="font-size: 10px"
+                      >
+                        Contactarse
+                      </button>
+                    </div>
+                  </div>
+                  <div class="px-4">
+                    <button
+                      class="btn btn-block btn-xl btn-light-primary font-bold mt-3"
+                    >
+                      Ver mas
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/vendors/apexcharts/apexcharts.js"></script>
+    <script src="assets/js/pages/dashboard.js"></script>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

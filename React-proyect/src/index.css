@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,200&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+}
+* {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+}
+.icono {
+  font-size: 25px;
+}
+
+/* ! Clase Default */
+.default {
+  display: block;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  border-radius: 0.5rem;
+  transition: all 0.5s;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #f85c70;
+  display: flex;
+  flex-direction: column;
+
+  width: 260px;
+  height: 7vh;
+}
+.default .icono {
+  position: absolute;
+  top: 0;
+}
+.default .letras {
+  display: none;
+}
+.default .letras-title {
+  position: absolute;
+
+  bottom: 0;
+}
+/* ! Default Dr */
+.defaultDr {
+  display: block;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  border-radius: 0.5rem;
+  transition: all 0.5s;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: rgb(12, 195, 167);
+  display: flex;
+  flex-direction: column;
+
+  width: 260px;
+  height: 7vh;
+}
+.defaultDr .icono {
+  position: absolute;
+  top: 0;
+}
+.defaultDr .letras {
+  display: none;
+}
+.defaultDr .letras-title {
+  position: absolute;
+
+  bottom: 0;
+}
+/* ! Clase Active Dr */
+
+.sidebar-linked-Dr {
+  display: block;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  border-radius: 0.5rem;
+  transition: all 0.5s;
+  text-decoration: none;
+  background-color: #f9c7ff;
+  height: 80px;
+  width: 260px;
+
+  box-shadow: 3px 3px 5px grey;
+}
+.sidebar-linked-Dr .letras-title {
+  display: none;
+}
+.sidebar-linked-Dr .letras {
+  position: relative;
+  right: -30px;
+  font-size: 18px;
+  font-weight: 900;
+  color: #000000;
+}
+.sidebar-linked-Dr .icono {
+  position: relative;
+  top: -10px;
+  left: 10px;
+  color: #000000;
+}
+
+/* ! Clase Active */
+
+.sidebar-linked {
+  display: block;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  border-radius: 0.5rem;
+  transition: all 0.5s;
+  text-decoration: none;
+  background-color: #ffffff;
+  height: 80px;
+  width: 260px;
+
+  box-shadow: 3px 3px 5px grey;
+}
+.sidebar-linked .letras-title {
+  display: none;
+}
+.sidebar-linked .letras {
+  position: relative;
+  right: -30px;
+  font-size: 18px;
+  font-weight: 900;
+  color: #000000;
+}
+.sidebar-linked .icono {
+  position: relative;
+  top: -10px;
+  left: 10px;
+  color: #000000;
+}
+.not-found {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-signin {
+  padding: 15px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.form-signin .checkbox {
+  font-weight: 400;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  filter: blur(2.5px);
+}
+.capa-ajuste {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #1c1c1d;
+  opacity: 0.3;
+}
+form {
+  position: relative;
+  z-index: 2;
+
+  border-radius: 20px;
+  width: 450px;
+  height: 500px;
+}
+.contenedor-form {
+  position: relative;
+  z-index: 2;
+  width: 550px;
+  height: 550px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 3px 3px 5px rgb(37, 37, 37);
+}
+.botones {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.botones a {
+  margin-top: 15px;
+}
+.logout {
+  position: absolute;
+  bottom: 50px;
+  left: 75px;
+}
+.coming {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 45px;
+}
+.flex {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.wid {
+  width: 10px;
+}
+.ingrese {
+  text-decoration: none;
+  color: yellow;
+  font-weight: 600;
+}

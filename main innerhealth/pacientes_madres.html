@@ -1,0 +1,1658 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InnerHealth | Pacientes</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+
+    <link rel="stylesheet" href="assets/vendors/simple-datatables/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/vendors/bootstrap-icons/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="assets/css/app.css" />
+    <link rel="icon" href="assets/img/logo.png">
+  </head>
+
+  <body>
+    <div id="app">
+       <div id="sidebar" class="active">
+        <div class="sidebar-wrapper active">
+          <div class="sidebar-header">
+            <div class="d-flex justify-content-between">
+              <div class="logo">
+                <a href="index.html"> InnerHtml</a>
+              </div>
+              <div class="toggler">
+                <a href="#" class="sidebar-hide d-xl-none d-block"
+                  ><i class="bi bi-x bi-middle"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar-menu">
+            <ul class="menu">
+              <li class="sidebar-title">Menu</li>
+
+              <li class="sidebar-item active">
+                <a href="index.html" class="sidebar-link">
+                  <i class="bi bi-grid-fill"></i>
+                  <span>Tablero</span>
+                </a>
+              </li>
+              <li class="sidebar-item active">
+                <a href="pacientes_madres.html" class="sidebar-link">
+                  <i class="bi bi-grid-fill"></i>
+                  <span>Pacientes</span>
+                </a>
+              </li>
+              <li class="sidebar-item active">
+                <a href="calendario.html" class="sidebar-link">
+                  <i class="bi bi-grid-fill"></i>
+                  <span>Calendario</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <button class="sidebar-toggler btn x">
+            <i data-feather="x"></i>
+          </button>
+        </div>
+      </div>
+      <div id="main">
+        <header class="mb-3">
+          <a href="#" class="burger-btn d-block d-xl-none">
+            <i class="bi bi-justify fs-3"></i>
+          </a>
+        </header>
+
+        <div class="page-heading">
+          <div class="page-title">
+            <div class="row">
+              <div class="col-12 col-md-6 order-md-1 order-last">
+                <h3>Datos de Pacientes</h3>
+                
+              </div>
+             
+            </div>
+          </div>
+          <section class="section">
+            <div class="card">
+             
+              <div class="card-body">
+                <table class="table table-striped" id="table1">
+                  <thead>
+                    <tr>
+                      <th>Nombre</th>
+                      <th>Fecha de entrada</th>
+                      <th>ID del paciente</th>
+                      <th>Enfermedad</th>
+                      <th>Estado</th>
+                      <th>Info</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Juana Lopez Suarez</td>
+                      <td>14 marzo 2021, 10:30</td>
+                      <td>#p568615</td>
+                      <td>Cancer de mama</td>
+                      <td>
+                        <span class="badge bg-success">Recuperado</span>
+                      </td>
+                      <td> <div class="me-1 mb-1 d-inline-block">
+                                            <!-- Button trigger for Extra Large  modal -->
+                                            <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                                                data-bs-target="#xlarge">
+                                                Ver Info
+                                            </button>
+
+                                            <!--Extra Large Modal -->
+                                            <div class="modal fade text-left w-100" id="xlarge" tabindex="-1"
+                                                role="dialog" aria-labelledby="myModalLabel16" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
+                                                    role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title" id="myModalLabel16">Datos del paciente</h4>
+                                                            <button type="button" class="close" data-bs-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <i data-feather="x"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                 <section class="section">
+                    <div class="row" id="basic-table">
+                        <div class="col-12 col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="avatar avatar-xl me-3">
+                                <img src="assets/images/faces/3.jpg" alt="" srcset="">
+                            </div>
+                                    <h4 class="card-title"> Juana Lopez Suerez</h4>
+                                    <h6>#p568615</h6>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                      <h6>Historial del paciente</h3>
+                                        <p>Nombre del paciente: <strong>Juana Lopez Suarez</strong></p>
+                                        <p>Identificacion del paciente: <strong>p568615</strong></p>
+                                        <p>Peso: <strong>230 libras</strong></p>
+                                        <p>Altura: <strong>6'1</strong></p>
+                                        <p>IMC: <strong>30,34</strong></p>
+                                        <p style="font-size: 10px;"> Grabado el 25/05/2018</p>
+                                        <!-- Table with outer spacing -->
+                                        <div class="table-responsive">
+                                            <table class="table table-lg">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Enfermedad</th>
+                                                        <th>fecha</th>
+                                                       
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-bold-500">Diabetes</td>
+                                                        <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-bold-500">Problema de sueño</td>
+                                                        <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-bold-500">Cuidado dental</td>
+                                                       <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </div>
+                  </section>
+
+
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-light-secondary"
+                                                                data-bs-dismiss="modal">
+                                                                <i class="bx bx-x d-block d-sm-none"></i>
+                                                                <span class="d-none d-sm-block">Close</span>
+                                                            </button>
+                                                            <button type="button" class="btn btn-primary ml-1"
+                                                                data-bs-dismiss="modal">
+                                                                <i class="bx bx-check d-block d-sm-none"></i>
+                                                                <span class="d-none d-sm-block">Accept</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div></td>
+                     
+                    </tr>
+                    <tr>
+                      <td>Maria Juana Lopez Suarez</td>
+                      <td>14 marzo 2021, 10:30</td>
+                      <td>#p568615</td>
+                      <td>Cancer de mama</td>
+                      <td>
+                        <span class="badge bg-success">Recuperado</span>
+                        - <td> <div class="me-1 mb-1 d-inline-block">
+                                            <!-- Button trigger for Extra Large  modal -->
+                                            <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                                                data-bs-target="#xlarge">
+                                                Ver Info
+                                            </button>
+
+                                            <!--Extra Large Modal -->
+                                            <div class="modal fade text-left w-100" id="xlarge" tabindex="-1"
+                                                role="dialog" aria-labelledby="myModalLabel16" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
+                                                    role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title" id="myModalLabel16">Datos del paciente</h4>
+                                                            <button type="button" class="close" data-bs-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <i data-feather="x"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                 <section class="section">
+                    <div class="row" id="basic-table">
+                        <div class="col-12 col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="avatar avatar-xl me-3">
+                                <img src="assets/images/faces/3.jpg" alt="" srcset="">
+                            </div>
+                                    <h4 class="card-title"> Juana Lopez Suerez</h4>
+                                    <h6>#p568615</h6>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                      <h6>Historial del paciente</h3>
+                                        <p>Nombre del paciente: <strong>Juana Lopez Suarez</strong></p>
+                                        <p>Identificacion del paciente: <strong>p568615</strong></p>
+                                        <p>Peso: <strong>230 libras</strong></p>
+                                        <p>Altura: <strong>6'1</strong></p>
+                                        <p>IMC: <strong>30,34</strong></p>
+                                        <p style="font-size: 10px;"> Grabado el 25/05/2018</p>
+                                        <!-- Table with outer spacing -->
+                                        <div class="table-responsive">
+                                            <table class="table table-lg">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Enfermedad</th>
+                                                        <th>fecha</th>
+                                                       
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-bold-500">Diabetes</td>
+                                                        <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-bold-500">Problema de sueño</td>
+                                                        <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-bold-500">Cuidado dental</td>
+                                                       <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </div>
+                  </section>
+
+
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-light-secondary"
+                                                                data-bs-dismiss="modal">
+                                                                <i class="bx bx-x d-block d-sm-none"></i>
+                                                                <span class="d-none d-sm-block">Close</span>
+                                                            </button>
+                                                            <button type="button" class="btn btn-primary ml-1"
+                                                                data-bs-dismiss="modal">
+                                                                <i class="bx bx-check d-block d-sm-none"></i>
+                                                                <span class="d-none d-sm-block">Accept</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div></td>
+                     
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Maria Juana Lopez Suarez</td>
+                      <td>14 marzo 2021, 10:30</td>
+                      <td>#p568615</td>
+                      <td>Cancer de mama</td>
+                      <td>
+                        <span class="badge bg-danger">Paciente Nuevo</span>
+                       
+                         <td> <div class="me-1 mb-1 d-inline-block">
+                                            <!-- Button trigger for Extra Large  modal -->
+                                            <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                                                data-bs-target="#xlarge">
+                                                Ver Info
+                                            </button>
+
+                                            <!--Extra Large Modal -->
+                                            <div class="modal fade text-left w-100" id="xlarge" tabindex="-1"
+                                                role="dialog" aria-labelledby="myModalLabel16" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
+                                                    role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title" id="myModalLabel16">Datos del paciente</h4>
+                                                            <button type="button" class="close" data-bs-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <i data-feather="x"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                 <section class="section">
+                    <div class="row" id="basic-table">
+                        <div class="col-12 col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="avatar avatar-xl me-3">
+                                <img src="assets/images/faces/3.jpg" alt="" srcset="">
+                            </div>
+                                    <h4 class="card-title"> Juana Lopez Suerez</h4>
+                                    <h6>#p568615</h6>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                      <h6>Historial del paciente</h3>
+                                        <p>Nombre del paciente: <strong>Juana Lopez Suarez</strong></p>
+                                        <p>Identificacion del paciente: <strong>p568615</strong></p>
+                                        <p>Peso: <strong>230 libras</strong></p>
+                                        <p>Altura: <strong>6'1</strong></p>
+                                        <p>IMC: <strong>30,34</strong></p>
+                                        <p style="font-size: 10px;"> Grabado el 25/05/2018</p>
+                                        <!-- Table with outer spacing -->
+                                        <div class="table-responsive">
+                                            <table class="table table-lg">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Enfermedad</th>
+                                                        <th>fecha</th>
+                                                       
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-bold-500">Diabetes</td>
+                                                        <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-bold-500">Problema de sueño</td>
+                                                        <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-bold-500">Cuidado dental</td>
+                                                       <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </div>
+                  </section>
+
+
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-light-secondary"
+                                                                data-bs-dismiss="modal">
+                                                                <i class="bx bx-x d-block d-sm-none"></i>
+                                                                <span class="d-none d-sm-block">Close</span>
+                                                            </button>
+                                                            <button type="button" class="btn btn-primary ml-1"
+                                                                data-bs-dismiss="modal">
+                                                                <i class="bx bx-check d-block d-sm-none"></i>
+                                                                <span class="d-none d-sm-block">Accept</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div></td>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Maria Juana Lopez Suarez</td>
+                      <td>14 marzo 2021, 10:30</td>
+                      <td>#p568615</td>
+                      <td>Cancer de mama</td>
+                      <td>
+                        <span class="badge bg-success">Recuperado</span>
+                        
+                         <td> <div class="me-1 mb-1 d-inline-block">
+                                            <!-- Button trigger for Extra Large  modal -->
+                                            <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                                                data-bs-target="#xlarge">
+                                                Ver Info
+                                            </button>
+
+                                            <!--Extra Large Modal -->
+                                            <div class="modal fade text-left w-100" id="xlarge" tabindex="-1"
+                                                role="dialog" aria-labelledby="myModalLabel16" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
+                                                    role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title" id="myModalLabel16">Datos del paciente</h4>
+                                                            <button type="button" class="close" data-bs-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <i data-feather="x"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                 <section class="section">
+                    <div class="row" id="basic-table">
+                        <div class="col-12 col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="avatar avatar-xl me-3">
+                                <img src="assets/images/faces/3.jpg" alt="" srcset="">
+                            </div>
+                                    <h4 class="card-title"> Juana Lopez Suerez</h4>
+                                    <h6>#p568615</h6>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                      <h6>Historial del paciente</h3>
+                                        <p>Nombre del paciente: <strong>Juana Lopez Suarez</strong></p>
+                                        <p>Identificacion del paciente: <strong>p568615</strong></p>
+                                        <p>Peso: <strong>230 libras</strong></p>
+                                        <p>Altura: <strong>6'1</strong></p>
+                                        <p>IMC: <strong>30,34</strong></p>
+                                        <p style="font-size: 10px;"> Grabado el 25/05/2018</p>
+                                        <!-- Table with outer spacing -->
+                                        <div class="table-responsive">
+                                            <table class="table table-lg">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Enfermedad</th>
+                                                        <th>fecha</th>
+                                                       
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-bold-500">Diabetes</td>
+                                                        <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-bold-500">Problema de sueño</td>
+                                                        <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-bold-500">Cuidado dental</td>
+                                                       <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </div>
+                  </section>
+
+
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-light-secondary"
+                                                                data-bs-dismiss="modal">
+                                                                <i class="bx bx-x d-block d-sm-none"></i>
+                                                                <span class="d-none d-sm-block">Close</span>
+                                                            </button>
+                                                            <button type="button" class="btn btn-primary ml-1"
+                                                                data-bs-dismiss="modal">
+                                                                <i class="bx bx-check d-block d-sm-none"></i>
+                                                                <span class="d-none d-sm-block">Accept</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div></td>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Maria Juana Lopez Suarez</td>
+                      <td>14 marzo 2021, 10:30</td>
+                      <td>#p568615</td>
+                      <td>Cancer de mama</td>
+                      <td>
+                        <span class="badge bg-success">Recuperado</span>
+                        <td> <div class="me-1 mb-1 d-inline-block">
+                                            <!-- Button trigger for Extra Large  modal -->
+                                            <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                                                data-bs-target="#xlarge">
+                                                Ver Info
+                                            </button>
+
+                                            <!--Extra Large Modal -->
+                                            <div class="modal fade text-left w-100" id="xlarge" tabindex="-1"
+                                                role="dialog" aria-labelledby="myModalLabel16" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
+                                                    role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title" id="myModalLabel16">Datos del paciente</h4>
+                                                            <button type="button" class="close" data-bs-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <i data-feather="x"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                 <section class="section">
+                    <div class="row" id="basic-table">
+                        <div class="col-12 col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="avatar avatar-xl me-3">
+                                <img src="assets/images/faces/3.jpg" alt="" srcset="">
+                            </div>
+                                    <h4 class="card-title"> Juana Lopez Suerez</h4>
+                                    <h6>#p568615</h6>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                      <h6>Historial del paciente</h3>
+                                        <p>Nombre del paciente: <strong>Juana Lopez Suarez</strong></p>
+                                        <p>Identificacion del paciente: <strong>p568615</strong></p>
+                                        <p>Peso: <strong>230 libras</strong></p>
+                                        <p>Altura: <strong>6'1</strong></p>
+                                        <p>IMC: <strong>30,34</strong></p>
+                                        <p style="font-size: 10px;"> Grabado el 25/05/2018</p>
+                                        <!-- Table with outer spacing -->
+                                        <div class="table-responsive">
+                                            <table class="table table-lg">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Enfermedad</th>
+                                                        <th>fecha</th>
+                                                       
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-bold-500">Diabetes</td>
+                                                        <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-bold-500">Problema de sueño</td>
+                                                        <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-bold-500">Cuidado dental</td>
+                                                       <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </div>
+                  </section>
+
+
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-light-secondary"
+                                                                data-bs-dismiss="modal">
+                                                                <i class="bx bx-x d-block d-sm-none"></i>
+                                                                <span class="d-none d-sm-block">Close</span>
+                                                            </button>
+                                                            <button type="button" class="btn btn-primary ml-1"
+                                                                data-bs-dismiss="modal">
+                                                                <i class="bx bx-check d-block d-sm-none"></i>
+                                                                <span class="d-none d-sm-block">Accept</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div></td>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Maria Juana Lopez Suarez</td>
+                      <td>14 marzo 2021, 10:30</td>
+                      <td>#p568615</td>
+                      <td>Cancer de mama</td>
+                      <td>
+                        <span class="badge bg-success">Recuperado</span>
+                         <td> <div class="me-1 mb-1 d-inline-block">
+                                            <!-- Button trigger for Extra Large  modal -->
+                                            <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                                                data-bs-target="#xlarge">
+                                                Ver Info
+                                            </button>
+
+                                            <!--Extra Large Modal -->
+                                            <div class="modal fade text-left w-100" id="xlarge" tabindex="-1"
+                                                role="dialog" aria-labelledby="myModalLabel16" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
+                                                    role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title" id="myModalLabel16">Datos del paciente</h4>
+                                                            <button type="button" class="close" data-bs-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <i data-feather="x"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                 <section class="section">
+                    <div class="row" id="basic-table">
+                        <div class="col-12 col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="avatar avatar-xl me-3">
+                                <img src="assets/images/faces/3.jpg" alt="" srcset="">
+                            </div>
+                                    <h4 class="card-title"> Juana Lopez Suerez</h4>
+                                    <h6>#p568615</h6>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                      <h6>Historial del paciente</h3>
+                                        <p>Nombre del paciente: <strong>Juana Lopez Suarez</strong></p>
+                                        <p>Identificacion del paciente: <strong>p568615</strong></p>
+                                        <p>Peso: <strong>230 libras</strong></p>
+                                        <p>Altura: <strong>6'1</strong></p>
+                                        <p>IMC: <strong>30,34</strong></p>
+                                        <p style="font-size: 10px;"> Grabado el 25/05/2018</p>
+                                        <!-- Table with outer spacing -->
+                                        <div class="table-responsive">
+                                            <table class="table table-lg">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Enfermedad</th>
+                                                        <th>fecha</th>
+                                                       
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-bold-500">Diabetes</td>
+                                                        <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-bold-500">Problema de sueño</td>
+                                                        <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-bold-500">Cuidado dental</td>
+                                                       <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </div>
+                  </section>
+
+
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-light-secondary"
+                                                                data-bs-dismiss="modal">
+                                                                <i class="bx bx-x d-block d-sm-none"></i>
+                                                                <span class="d-none d-sm-block">Close</span>
+                                                            </button>
+                                                            <button type="button" class="btn btn-primary ml-1"
+                                                                data-bs-dismiss="modal">
+                                                                <i class="bx bx-check d-block d-sm-none"></i>
+                                                                <span class="d-none d-sm-block">Accept</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div></td>
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Maria Juana Lopez Suarez</td>
+                      <td>14 marzo 2021, 10:30</td>
+                      <td>#p568615</td>
+                      <td>Cancer de mama</td>
+                      <td>
+                        <span class="badge bg-success">Recuperado</span>
+                         <td> <div class="me-1 mb-1 d-inline-block">
+                                            <!-- Button trigger for Extra Large  modal -->
+                                            <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                                                data-bs-target="#xlarge">
+                                                Ver Info
+                                            </button>
+
+                                            <!--Extra Large Modal -->
+                                            <div class="modal fade text-left w-100" id="xlarge" tabindex="-1"
+                                                role="dialog" aria-labelledby="myModalLabel16" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
+                                                    role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title" id="myModalLabel16">Datos del paciente</h4>
+                                                            <button type="button" class="close" data-bs-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <i data-feather="x"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                 <section class="section">
+                    <div class="row" id="basic-table">
+                        <div class="col-12 col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="avatar avatar-xl me-3">
+                                <img src="assets/images/faces/3.jpg" alt="" srcset="">
+                            </div>
+                                    <h4 class="card-title"> Juana Lopez Suerez</h4>
+                                    <h6>#p568615</h6>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                      <h6>Historial del paciente</h3>
+                                        <p>Nombre del paciente: <strong>Juana Lopez Suarez</strong></p>
+                                        <p>Identificacion del paciente: <strong>p568615</strong></p>
+                                        <p>Peso: <strong>230 libras</strong></p>
+                                        <p>Altura: <strong>6'1</strong></p>
+                                        <p>IMC: <strong>30,34</strong></p>
+                                        <p style="font-size: 10px;"> Grabado el 25/05/2018</p>
+                                        <!-- Table with outer spacing -->
+                                        <div class="table-responsive">
+                                            <table class="table table-lg">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Enfermedad</th>
+                                                        <th>fecha</th>
+                                                       
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-bold-500">Diabetes</td>
+                                                        <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-bold-500">Problema de sueño</td>
+                                                        <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-bold-500">Cuidado dental</td>
+                                                       <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </div>
+                  </section>
+
+
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-light-secondary"
+                                                                data-bs-dismiss="modal">
+                                                                <i class="bx bx-x d-block d-sm-none"></i>
+                                                                <span class="d-none d-sm-block">Close</span>
+                                                            </button>
+                                                            <button type="button" class="btn btn-primary ml-1"
+                                                                data-bs-dismiss="modal">
+                                                                <i class="bx bx-check d-block d-sm-none"></i>
+                                                                <span class="d-none d-sm-block">Accept</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div></td>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Maria Juana Lopez Suarez</td>
+                      <td>14 marzo 2021, 10:30</td>
+                      <td>#p568615</td>
+                      <td>Cancer de mama</td>
+                      <td>
+                        <span class="badge bg-danger">Paciente Nuevo</span>
+                         <td> <div class="me-1 mb-1 d-inline-block">
+                                            <!-- Button trigger for Extra Large  modal -->
+                                            <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                                                data-bs-target="#xlarge">
+                                                Ver Info
+                                            </button>
+
+                                            <!--Extra Large Modal -->
+                                            <div class="modal fade text-left w-100" id="xlarge" tabindex="-1"
+                                                role="dialog" aria-labelledby="myModalLabel16" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
+                                                    role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title" id="myModalLabel16">Datos del paciente</h4>
+                                                            <button type="button" class="close" data-bs-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <i data-feather="x"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                 <section class="section">
+                    <div class="row" id="basic-table">
+                        <div class="col-12 col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="avatar avatar-xl me-3">
+                                <img src="assets/images/faces/3.jpg" alt="" srcset="">
+                            </div>
+                                    <h4 class="card-title"> Juana Lopez Suerez</h4>
+                                    <h6>#p568615</h6>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                      <h6>Historial del paciente</h3>
+                                        <p>Nombre del paciente: <strong>Juana Lopez Suarez</strong></p>
+                                        <p>Identificacion del paciente: <strong>p568615</strong></p>
+                                        <p>Peso: <strong>230 libras</strong></p>
+                                        <p>Altura: <strong>6'1</strong></p>
+                                        <p>IMC: <strong>30,34</strong></p>
+                                        <p style="font-size: 10px;"> Grabado el 25/05/2018</p>
+                                        <!-- Table with outer spacing -->
+                                        <div class="table-responsive">
+                                            <table class="table table-lg">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Enfermedad</th>
+                                                        <th>fecha</th>
+                                                       
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-bold-500">Diabetes</td>
+                                                        <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-bold-500">Problema de sueño</td>
+                                                        <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-bold-500">Cuidado dental</td>
+                                                       <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </div>
+                  </section>
+
+
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-light-secondary"
+                                                                data-bs-dismiss="modal">
+                                                                <i class="bx bx-x d-block d-sm-none"></i>
+                                                                <span class="d-none d-sm-block">Close</span>
+                                                            </button>
+                                                            <button type="button" class="btn btn-primary ml-1"
+                                                                data-bs-dismiss="modal">
+                                                                <i class="bx bx-check d-block d-sm-none"></i>
+                                                                <span class="d-none d-sm-block">Accept</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div></td>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Maria Juana Lopez Suarez</td>
+                      <td>14 marzo 2021, 10:30</td>
+                      <td>#p568615</td>
+                      <td>Cancer de mama</td>
+                      <td>
+                        <span class="badge bg-success">Recuperado</span>
+                         <td> <div class="me-1 mb-1 d-inline-block">
+                                            <!-- Button trigger for Extra Large  modal -->
+                                            <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                                                data-bs-target="#xlarge">
+                                                Ver Info
+                                            </button>
+
+                                            <!--Extra Large Modal -->
+                                            <div class="modal fade text-left w-100" id="xlarge" tabindex="-1"
+                                                role="dialog" aria-labelledby="myModalLabel16" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
+                                                    role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title" id="myModalLabel16">Datos del paciente</h4>
+                                                            <button type="button" class="close" data-bs-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <i data-feather="x"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                 <section class="section">
+                    <div class="row" id="basic-table">
+                        <div class="col-12 col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="avatar avatar-xl me-3">
+                                <img src="assets/images/faces/3.jpg" alt="" srcset="">
+                            </div>
+                                    <h4 class="card-title"> Juana Lopez Suerez</h4>
+                                    <h6>#p568615</h6>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                      <h6>Historial del paciente</h3>
+                                        <p>Nombre del paciente: <strong>Juana Lopez Suarez</strong></p>
+                                        <p>Identificacion del paciente: <strong>p568615</strong></p>
+                                        <p>Peso: <strong>230 libras</strong></p>
+                                        <p>Altura: <strong>6'1</strong></p>
+                                        <p>IMC: <strong>30,34</strong></p>
+                                        <p style="font-size: 10px;"> Grabado el 25/05/2018</p>
+                                        <!-- Table with outer spacing -->
+                                        <div class="table-responsive">
+                                            <table class="table table-lg">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Enfermedad</th>
+                                                        <th>fecha</th>
+                                                       
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-bold-500">Diabetes</td>
+                                                        <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-bold-500">Problema de sueño</td>
+                                                        <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-bold-500">Cuidado dental</td>
+                                                       <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </div>
+                  </section>
+
+
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-light-secondary"
+                                                                data-bs-dismiss="modal">
+                                                                <i class="bx bx-x d-block d-sm-none"></i>
+                                                                <span class="d-none d-sm-block">Close</span>
+                                                            </button>
+                                                            <button type="button" class="btn btn-primary ml-1"
+                                                                data-bs-dismiss="modal">
+                                                                <i class="bx bx-check d-block d-sm-none"></i>
+                                                                <span class="d-none d-sm-block">Accept</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div></td>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Maria Juana Lopez Suarez</td>
+                      <td>14 marzo 2021, 10:30</td>
+                      <td>#p568615</td>
+                      <td>Cancer de mama</td>
+                      <td>
+                        <span class="badge bg-success">Recuperado</span>
+                         <td> <div class="me-1 mb-1 d-inline-block">
+                                            <!-- Button trigger for Extra Large  modal -->
+                                            <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                                                data-bs-target="#xlarge">
+                                                Ver Info
+                                            </button>
+
+                                            <!--Extra Large Modal -->
+                                            <div class="modal fade text-left w-100" id="xlarge" tabindex="-1"
+                                                role="dialog" aria-labelledby="myModalLabel16" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
+                                                    role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title" id="myModalLabel16">Datos del paciente</h4>
+                                                            <button type="button" class="close" data-bs-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <i data-feather="x"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                 <section class="section">
+                    <div class="row" id="basic-table">
+                        <div class="col-12 col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="avatar avatar-xl me-3">
+                                <img src="assets/images/faces/3.jpg" alt="" srcset="">
+                            </div>
+                                    <h4 class="card-title"> Juana Lopez Suerez</h4>
+                                    <h6>#p568615</h6>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                      <h6>Historial del paciente</h3>
+                                        <p>Nombre del paciente: <strong>Juana Lopez Suarez</strong></p>
+                                        <p>Identificacion del paciente: <strong>p568615</strong></p>
+                                        <p>Peso: <strong>230 libras</strong></p>
+                                        <p>Altura: <strong>6'1</strong></p>
+                                        <p>IMC: <strong>30,34</strong></p>
+                                        <p style="font-size: 10px;"> Grabado el 25/05/2018</p>
+                                        <!-- Table with outer spacing -->
+                                        <div class="table-responsive">
+                                            <table class="table table-lg">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Enfermedad</th>
+                                                        <th>fecha</th>
+                                                       
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-bold-500">Diabetes</td>
+                                                        <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-bold-500">Problema de sueño</td>
+                                                        <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-bold-500">Cuidado dental</td>
+                                                       <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </div>
+                  </section>
+
+
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-light-secondary"
+                                                                data-bs-dismiss="modal">
+                                                                <i class="bx bx-x d-block d-sm-none"></i>
+                                                                <span class="d-none d-sm-block">Close</span>
+                                                            </button>
+                                                            <button type="button" class="btn btn-primary ml-1"
+                                                                data-bs-dismiss="modal">
+                                                                <i class="bx bx-check d-block d-sm-none"></i>
+                                                                <span class="d-none d-sm-block">Accept</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div></td>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Maria Juana Lopez Suarez</td>
+                      <td>14 marzo 2021, 10:30</td>
+                      <td>#p568615</td>
+                      <td>Cancer de mama</td>
+                      <td>
+                        <span class="badge bg-success">Recuperado</span>
+                         <td> <div class="me-1 mb-1 d-inline-block">
+                                            <!-- Button trigger for Extra Large  modal -->
+                                            <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                                                data-bs-target="#xlarge">
+                                                Ver Info
+                                            </button>
+
+                                            <!--Extra Large Modal -->
+                                            <div class="modal fade text-left w-100" id="xlarge" tabindex="-1"
+                                                role="dialog" aria-labelledby="myModalLabel16" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
+                                                    role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title" id="myModalLabel16">Datos del paciente</h4>
+                                                            <button type="button" class="close" data-bs-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <i data-feather="x"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                 <section class="section">
+                    <div class="row" id="basic-table">
+                        <div class="col-12 col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="avatar avatar-xl me-3">
+                                <img src="assets/images/faces/3.jpg" alt="" srcset="">
+                            </div>
+                                    <h4 class="card-title"> Juana Lopez Suerez</h4>
+                                    <h6>#p568615</h6>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                      <h6>Historial del paciente</h3>
+                                        <p>Nombre del paciente: <strong>Juana Lopez Suarez</strong></p>
+                                        <p>Identificacion del paciente: <strong>p568615</strong></p>
+                                        <p>Peso: <strong>230 libras</strong></p>
+                                        <p>Altura: <strong>6'1</strong></p>
+                                        <p>IMC: <strong>30,34</strong></p>
+                                        <p style="font-size: 10px;"> Grabado el 25/05/2018</p>
+                                        <!-- Table with outer spacing -->
+                                        <div class="table-responsive">
+                                            <table class="table table-lg">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Enfermedad</th>
+                                                        <th>fecha</th>
+                                                       
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-bold-500">Diabetes</td>
+                                                        <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-bold-500">Problema de sueño</td>
+                                                        <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-bold-500">Cuidado dental</td>
+                                                       <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </div>
+                  </section>
+
+
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-light-secondary"
+                                                                data-bs-dismiss="modal">
+                                                                <i class="bx bx-x d-block d-sm-none"></i>
+                                                                <span class="d-none d-sm-block">Close</span>
+                                                            </button>
+                                                            <button type="button" class="btn btn-primary ml-1"
+                                                                data-bs-dismiss="modal">
+                                                                <i class="bx bx-check d-block d-sm-none"></i>
+                                                                <span class="d-none d-sm-block">Accept</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div></td>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Maria Juana Lopez Suarez</td>
+                      <td>14 marzo 2021, 10:30</td>
+                      <td>#p568615</td>
+                      <td>Cancer de mama</td>
+                      <td>
+                        <span class="badge bg-success">Recuperado</span>
+                         <td> <div class="me-1 mb-1 d-inline-block">
+                                            <!-- Button trigger for Extra Large  modal -->
+                                            <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                                                data-bs-target="#xlarge">
+                                                Ver Info
+                                            </button>
+
+                                            <!--Extra Large Modal -->
+                                            <div class="modal fade text-left w-100" id="xlarge" tabindex="-1"
+                                                role="dialog" aria-labelledby="myModalLabel16" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
+                                                    role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title" id="myModalLabel16">Datos del paciente</h4>
+                                                            <button type="button" class="close" data-bs-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <i data-feather="x"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                 <section class="section">
+                    <div class="row" id="basic-table">
+                        <div class="col-12 col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="avatar avatar-xl me-3">
+                                <img src="assets/images/faces/3.jpg" alt="" srcset="">
+                            </div>
+                                    <h4 class="card-title"> Juana Lopez Suerez</h4>
+                                    <h6>#p568615</h6>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                      <h6>Historial del paciente</h3>
+                                        <p>Nombre del paciente: <strong>Juana Lopez Suarez</strong></p>
+                                        <p>Identificacion del paciente: <strong>p568615</strong></p>
+                                        <p>Peso: <strong>230 libras</strong></p>
+                                        <p>Altura: <strong>6'1</strong></p>
+                                        <p>IMC: <strong>30,34</strong></p>
+                                        <p style="font-size: 10px;"> Grabado el 25/05/2018</p>
+                                        <!-- Table with outer spacing -->
+                                        <div class="table-responsive">
+                                            <table class="table table-lg">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Enfermedad</th>
+                                                        <th>fecha</th>
+                                                       
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-bold-500">Diabetes</td>
+                                                        <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-bold-500">Problema de sueño</td>
+                                                        <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-bold-500">Cuidado dental</td>
+                                                       <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </div>
+                  </section>
+
+
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-light-secondary"
+                                                                data-bs-dismiss="modal">
+                                                                <i class="bx bx-x d-block d-sm-none"></i>
+                                                                <span class="d-none d-sm-block">Close</span>
+                                                            </button>
+                                                            <button type="button" class="btn btn-primary ml-1"
+                                                                data-bs-dismiss="modal">
+                                                                <i class="bx bx-check d-block d-sm-none"></i>
+                                                                <span class="d-none d-sm-block">Accept</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div></td>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Maria Juana Lopez Suarez</td>
+                      <td>14 marzo 2021, 10:30</td>
+                      <td>#p568615</td>
+                      <td>Cancer de mama</td>
+                      <td>
+                        <span class="badge bg-success">Recuperado</span>
+                         <td> <div class="me-1 mb-1 d-inline-block">
+                                            <!-- Button trigger for Extra Large  modal -->
+                                            <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                                                data-bs-target="#xlarge">
+                                                Ver Info
+                                            </button>
+
+                                            <!--Extra Large Modal -->
+                                            <div class="modal fade text-left w-100" id="xlarge" tabindex="-1"
+                                                role="dialog" aria-labelledby="myModalLabel16" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
+                                                    role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title" id="myModalLabel16">Datos del paciente</h4>
+                                                            <button type="button" class="close" data-bs-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <i data-feather="x"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                 <section class="section">
+                    <div class="row" id="basic-table">
+                        <div class="col-12 col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="avatar avatar-xl me-3">
+                                <img src="assets/images/faces/3.jpg" alt="" srcset="">
+                            </div>
+                                    <h4 class="card-title"> Juana Lopez Suerez</h4>
+                                    <h6>#p568615</h6>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                      <h6>Historial del paciente</h3>
+                                        <p>Nombre del paciente: <strong>Juana Lopez Suarez</strong></p>
+                                        <p>Identificacion del paciente: <strong>p568615</strong></p>
+                                        <p>Peso: <strong>230 libras</strong></p>
+                                        <p>Altura: <strong>6'1</strong></p>
+                                        <p>IMC: <strong>30,34</strong></p>
+                                        <p style="font-size: 10px;"> Grabado el 25/05/2018</p>
+                                        <!-- Table with outer spacing -->
+                                        <div class="table-responsive">
+                                            <table class="table table-lg">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Enfermedad</th>
+                                                        <th>fecha</th>
+                                                       
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-bold-500">Diabetes</td>
+                                                        <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-bold-500">Problema de sueño</td>
+                                                        <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-bold-500">Cuidado dental</td>
+                                                       <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </div>
+                  </section>
+
+
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-light-secondary"
+                                                                data-bs-dismiss="modal">
+                                                                <i class="bx bx-x d-block d-sm-none"></i>
+                                                                <span class="d-none d-sm-block">Close</span>
+                                                            </button>
+                                                            <button type="button" class="btn btn-primary ml-1"
+                                                                data-bs-dismiss="modal">
+                                                                <i class="bx bx-check d-block d-sm-none"></i>
+                                                                <span class="d-none d-sm-block">Accept</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div></td>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Maria Juana Lopez Suarez</td>
+                      <td>14 marzo 2021, 10:30</td>
+                      <td>#p568615</td>
+                      <td>Cancer de mama</td>
+                      <td>
+                        <span class="badge bg-success">Recuperado</span>
+                         <td> <div class="me-1 mb-1 d-inline-block">
+                                            <!-- Button trigger for Extra Large  modal -->
+                                            <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                                                data-bs-target="#xlarge">
+                                                Ver Info
+                                            </button>
+
+                                            <!--Extra Large Modal -->
+                                            <div class="modal fade text-left w-100" id="xlarge" tabindex="-1"
+                                                role="dialog" aria-labelledby="myModalLabel16" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
+                                                    role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title" id="myModalLabel16">Datos del paciente</h4>
+                                                            <button type="button" class="close" data-bs-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <i data-feather="x"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                 <section class="section">
+                    <div class="row" id="basic-table">
+                        <div class="col-12 col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="avatar avatar-xl me-3">
+                                <img src="assets/images/faces/3.jpg" alt="" srcset="">
+                            </div>
+                                    <h4 class="card-title"> Juana Lopez Suerez</h4>
+                                    <h6>#p568615</h6>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                      <h6>Historial del paciente</h3>
+                                        <p>Nombre del paciente: <strong>Juana Lopez Suarez</strong></p>
+                                        <p>Identificacion del paciente: <strong>p568615</strong></p>
+                                        <p>Peso: <strong>230 libras</strong></p>
+                                        <p>Altura: <strong>6'1</strong></p>
+                                        <p>IMC: <strong>30,34</strong></p>
+                                        <p style="font-size: 10px;"> Grabado el 25/05/2018</p>
+                                        <!-- Table with outer spacing -->
+                                        <div class="table-responsive">
+                                            <table class="table table-lg">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Enfermedad</th>
+                                                        <th>fecha</th>
+                                                       
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-bold-500">Diabetes</td>
+                                                        <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-bold-500">Problema de sueño</td>
+                                                        <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-bold-500">Cuidado dental</td>
+                                                       <td>lun.,18 de marzo de 2021, 11:15</td>
+                                                        
+
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </div>
+                  </section>
+
+
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-light-secondary"
+                                                                data-bs-dismiss="modal">
+                                                                <i class="bx bx-x d-block d-sm-none"></i>
+                                                                <span class="d-none d-sm-block">Close</span>
+                                                            </button>
+                                                            <button type="button" class="btn btn-primary ml-1"
+                                                                data-bs-dismiss="modal">
+                                                                <i class="bx bx-check d-block d-sm-none"></i>
+                                                                <span class="d-none d-sm-block">Accept</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div></td>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/vendors/simple-datatables/simple-datatables.js"></script>
+    <script>
+      // Simple Datatable
+      let table1 = document.querySelector("#table1");
+      let dataTable = new simpleDatatables.DataTable(table1);
+    </script>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

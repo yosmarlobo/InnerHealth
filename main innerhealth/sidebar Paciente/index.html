@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InnerHealth | Inicio</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+
+    <link rel="stylesheet" href="assets/vendors/iconly/bold.css" />
+
+    <link
+      rel="stylesheet"
+      href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/vendors/bootstrap-icons/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="assets/css/app.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.svg"
+      type="image/x-icon"
+    />
+    <link rel="icon" href="assets/img/logo.png" />
+  </head>
+
+  <body>
+    <div id="app">
+      <div id="sidebar" class="active">
+        <div class="sidebar-wrapper active">
+          <div class="sidebar-header">
+            <div class="d-flex justify-content-between">
+              <div class="logo">
+                <a href="index.html"> InnerHealth</a>
+              </div>
+              <div class="toggler">
+                <a href="#" class="sidebar-hide d-xl-none d-block"
+                  ><i class="bi bi-x bi-middle"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar-menu">
+            <ul class="menu">
+              <li class="sidebar-title">Menu</li>
+
+              <li class="sidebar-item active">
+                <a href="#" class="sidebar-link">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-house-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"
+                    />
+                  </svg>
+                  <span>Inicio</span>
+                </a>
+              </li>
+
+              <li class="sidebar-item active">
+                <a href="cita.html" class="sidebar-link">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-journal-bookmark-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M6 1h6v7a.5.5 0 0 1-.757.429L9 7.083 6.757 8.43A.5.5 0 0 1 6 8V1z"
+                    />
+                    <path
+                      d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"
+                    />
+                    <path
+                      d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"
+                    />
+                  </svg>
+                  <span>Agendar Cita</span>
+                </a>
+              </li>
+
+              <li class="sidebar-item active">
+                <a href="maps.html" class="sidebar-link">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-geo-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411z"
+                    />
+                  </svg>
+                  <span>Ubicar Centros de Salud</span>
+                </a>
+              </li>
+              <li class="sidebar-item active">
+                <a href="perfil.html" class="sidebar-link">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-person-square"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                    <path
+                      d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12z"
+                    />
+                  </svg>
+                  <span>Mi Perfil</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <button class="sidebar-toggler btn x">
+            <i data-feather="x"></i>
+          </button>
+        </div>
+      </div>
+
+      <div id="main">
+        <header class="mb-3">
+          <a href="#" class="burger-btn d-block d-xl-none">
+            <i class="bi bi-justify fs-3"></i>
+          </a>
+        </header>
+
+        <div class="page-heading">
+          <h3>Bienvenida Daniela Moretti</h3>
+        </div>
+        <div class="page-content">
+          <section class="row">
+            <div class="col-12 col-lg-9">
+              <div class="row">
+                <div class="col-6 col-lg-3 col-md-6">
+                  <div class="card">
+                    <div class="card-body px-3 py-4-5">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <div class="stats-icon red">
+                            <i class="iconly-boldBookmark"></i>
+                          </div>
+                        </div>
+                        <div class="col-md-8">
+                          <h6 class="text-muted font-semibold">
+                            Pruebas Pendientes
+                          </h6>
+                          <h6 class="font-extrabold mb-0">2</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-12 col-xl-4">
+                  <div class="card">
+                    <div class="card-header">
+                      <h4>Estadisticas de Gestantes En el Peru</h4>
+                    </div>
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-6">
+                          <div class="d-flex align-items-center">
+                            <svg
+                              class="bi text-primary"
+                              width="32"
+                              height="32"
+                              fill="blue"
+                              style="width: 10px"
+                            >
+                              <use
+                                xlink:href="assets/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill"
+                              />
+                            </svg>
+                            <h5 class="mb-0 ms-3">Gestantes</h5>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <h5 class="mb-0">862</h5>
+                        </div>
+                        <div class="col-12">
+                          <div id="chart-europe"></div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6">
+                          <div class="d-flex align-items-center">
+                            <svg
+                              class="bi text-success"
+                              width="32"
+                              height="32"
+                              fill="blue"
+                              style="width: 10px"
+                            >
+                              <use
+                                xlink:href="assets/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill"
+                              />
+                            </svg>
+                            <h5 class="mb-0 ms-3">Lima</h5>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <h5 class="mb-0">375</h5>
+                        </div>
+                        <div class="col-12">
+                          <div id="chart-america"></div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6">
+                          <div class="d-flex align-items-center">
+                            <svg
+                              class="bi text-danger"
+                              width="32"
+                              height="32"
+                              fill="blue"
+                              style="width: 10px"
+                            >
+                              <use
+                                xlink:href="assets/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill"
+                              />
+                            </svg>
+                            <h5 class="mb-0 ms-3">Provincias</h5>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <h5 class="mb-0">1025</h5>
+                        </div>
+                        <div class="col-12">
+                          <div id="chart-indonesia"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-xl-8">
+                  <div class="card">
+                    <div class="card-header">
+                      <h4>Experiencias De otras Madres</h4>
+                    </div>
+                    <div class="card-body">
+                      <div class="table-responsive">
+                        <table class="table table-hover table-lg tabla">
+                          <thead>
+                            <tr>
+                              <th>Nombre</th>
+                              <th>Experiencia</th>
+                              <th>Calificacion dada</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="col-3">
+                                <div class="d-flex align-items-center">
+                                  <div class="avatar avatar-md">
+                                    <img src="assets/images/faces/5.jpg" />
+                                  </div>
+                                  <p class="font-bold ms-3 mb-0">
+                                    Perla Zapata
+                                  </p>
+                                </div>
+                              </td>
+                              <td class="col-auto">
+                                <p class="mb-0">
+                                  Super exelente... Pude encontrar mi posta mas
+                                  cercana muy grata atencion, Muchas Gracias
+                                  @InnerHealth
+                                </p>
+                              </td>
+                              <!-- <i class="bi bi-star"></i>
+                              <i class="bi bi-star-fill"></i> -->
+                              <td>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="col-3">
+                                <div class="d-flex align-items-center">
+                                  <div class="avatar avatar-md">
+                                    <img src="assets/images/faces/2.jpg" />
+                                  </div>
+                                  <p class="font-bold ms-3 mb-0">
+                                    Maria Vargas
+                                  </p>
+                                </div>
+                              </td>
+                              <td class="col-auto">
+                                <p class="mb-0">
+                                  Me encanto mucho el servicio que te dan...son
+                                  muy atentos y se preocupan por uno,Pude
+                                  resolvir todas mis dudas y ya me recupere
+                                  gracias a la doctora Josefa Valencia
+                                </p>
+                              </td>
+                              <td>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-half"></i>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="col-3">
+                                <div class="d-flex align-items-center">
+                                  <div class="avatar avatar-md">
+                                    <img src="assets/images/faces/2.jpg" />
+                                  </div>
+                                  <p class="font-bold ms-3 mb-0">Juana Vera</p>
+                                </div>
+                              </td>
+                              <td class="col-auto">
+                                <p class="mb-0">
+                                  Super @InnerHealth Me ha ayudado mucho creo
+                                  que le hacen falta algunas modifaciones pero
+                                  de resto exelente plataforma😊
+                                </p>
+                              </td>
+                              <td>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-half"></i>
+                                <i class="bi bi-star"></i>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="col-3">
+                                <div class="d-flex align-items-center">
+                                  <div class="avatar avatar-md">
+                                    <img src="assets/images/faces/2.jpg" />
+                                  </div>
+                                  <p class="font-bold ms-3 mb-0">
+                                    Marible Bencomo
+                                  </p>
+                                </div>
+                              </td>
+                              <td class="col-auto">
+                                <p class="mb-0">
+                                  La mejor Plataforma de salud que he visto😍,
+                                  tienen unas doctoras super atentas... Me
+                                  encanta @innerhealth
+                                </p>
+                              </td>
+                              <td>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-3">
+              <div class="card">
+                <div class="card-body py-4 px-5">
+                  <div class="d-flex align-items-center">
+                    <div class="avatar avatar-xl">
+                      <img src="assets/images/faces/5.jpg" alt="Face 1" />
+                    </div>
+                    <div class="ms-3 name">
+                      <h5 class="font-bold">Daniela Moretti</h5>
+                      <h6 class="text-muted mb-0">Daniela@example.com</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <h4>Solicitudes de Citas Hechas</h4>
+                </div>
+                <div class="card-content pb-4">
+                  <div class="recent-message d-flex px-4 py-3">
+                    <div class="avatar avatar-lg">
+                      <img src="assets/images/faces/5.jpg" />
+                    </div>
+                    <div class="name ms-4">
+                      <h5 class="mb-1">A : Maria Verucci</h5>
+                      <h6 class="text-muted mb-0">
+                        Doctora Maria Verucci llevo 7 meses de embarazo pero
+                        presento mucho dolores me gustaria una cita con usted.
+                      </h6>
+                    </div>
+                  </div>
+
+                  <div class="px-4">
+                    <button
+                      class="btn btn-block btn-xl btn-light-primary font-bold mt-3"
+                    >
+                      <a href="cita.html">Crear Solicitud</a>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <footer>
+          <div class="footer clearfix mb-0 text-muted">
+            <div class="float-start">
+              <p>2021 &copy InnerHealth</p>
+            </div>
+            <div class="float-end"></div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/vendors/apexcharts/apexcharts.js"></script>
+    <script src="assets/js/pages/dashboard.js"></script>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
